@@ -3,7 +3,7 @@
 #include<ctype.h>
 int main()
 {
-    char in[120],out[120];
+    char in[120];
     int i,j,count;
     scanf("%s",&in);
     for (i = 0 ; i <= strlen(in) ; i++)
