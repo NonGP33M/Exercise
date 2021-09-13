@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "math.h": "c",
+        "random": "c",
+        "cmath": "c",
+        "cstdlib": "c"
+    },
+    "python.pythonPath": "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\python3.9.exe"
+}
