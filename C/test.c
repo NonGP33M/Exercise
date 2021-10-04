@@ -1,13 +1,28 @@
 #include <stdio.h>
 int main() 
 {
-    //จงเขียนโปรแกรมเพื่อรับข้อมูลความสูงของนักเรียน 10 คน แล้วแสดงผลลัพธ์ความสูงของนักเรียน 10 คน พร้อมหาว่าความสูงเฉลี่ยของนักเรียน 10 คนเป็นเท่าไร (Level 3)
-    int x[10] ,n=10,sum = 0;
-    scanf("%d %d %d %d %d %d %d %d %d %d",&x[0],&x[1],&x[2],&x[3],&x[4],&x[5],&x[6],&x[7],&x[8],&x[9]);
-    for (int i = 0; i < n; i++)
+    int in;
+    printf(" *** Show isosceles triangle ***\n");
+    printf("Enter a counting number : ");
+    scanf("%d",&in);
+    if (in < 3)
+        printf(" --- Incorrect number. ---");
+    else
     {
-        sum+=x[i];
+        printf("Output :\n");
+        for (int i = 1 ; i <= in ; i++)
+        {
+            for (int j = in ; j > i ; j--)
+            {
+                printf(" ");
+            }
+
+            for (int j = 1 ; j <= (i*2)-1 ; j++)
+            {
+                printf("*");
+            }
+            printf("\n");
+        }
     }
-       printf("%.2f ", sum/(float)n);
     return 0;
 }

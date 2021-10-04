@@ -1,24 +1,30 @@
-def calculateBMI(height, weight):
-    bmi = int(weight)/(int(height)/100)**2
-    return bmi
-print("*** BMI Calculation ***")
-def getInput():
-    print("Enter height(cm) weight(kg) : ",end='')
-    return input()
-
-def bmiConclusion(bmi):
-    if bmi < 18.5 :
-        print("underweight")
-    elif 18.5 <= bmi and bmi < 25 :
-        print("normal")
-    elif 25 <= bmi and bmi < 30 :
-        print("overweight")
-    elif 30 <= bmi and bmi < 35 :
-        print("obase")
-    else :
-        print("extremely obase")
+t=0
+l = 0
+s = 0
+h = 0
+for i in range(1,11):
+ i = input('Feeling Like ("L"), Sad ("S"), and Heart("H")? ')
+ if i.upper()and i == "L": 
+  
+    l+=1
+    t+=1
+    
+ elif i.upper() and i == "S":
+    s+=1
+    t+=1
+ elif i.upper() and i == "H":
+    h+=1
+    t+=1
    
-height, weight = getInput().split()
-bmi = calculateBMI(height, weight)
-print("Your BMI is %.2f" %bmi)
-print(bmiConclusion(bmi))
+ else:
+    
+    print("Invalid input , accepts only (L/S/H).")
+a=l/t*100
+b=s/t*100
+c=h/t*100
+print("============")
+print("Total is %d"%t)
+print("============")
+print("Like: %d (%.2f%%)"%(l,a))
+print("Sad: %d (%.2f%%)"%(s,b))
+print("Heart: %d (%.2f%%)"%(h,c))
